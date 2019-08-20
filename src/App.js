@@ -13,7 +13,6 @@ class App extends React.Component {
 
     formHandling(firstName, lastName, email) {
         let newContacts = Array.from(this.state.contacts);
-        console.log(firstName + " - " + lastName + " - " + email);
         let newContact = {
             id: newContacts.length + 1,
             firstName: firstName,
@@ -22,7 +21,6 @@ class App extends React.Component {
         };
         newContacts.push(newContact);
         this.setState({contacts: newContacts});
-        console.log(this.state.contacts.length);
     }
 
     render() {
