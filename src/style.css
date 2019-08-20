@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+
+body { background-color: #718093; }
+
+img { width: 100px; height: 100px; display: block; margin: 0 auto; }
+
+p { text-align: center; color: #fff; font-size: 16px; }
+
+a { display: table; margin: 0 auto; }
+
+input { font-size: 20px; background-color: #dcdde1; }
+
+button { display: block; margin: 20px auto; width: 150px; height: 40px; background-color: #5270ff; border: none; color: #fff; font-size: 18px; cursor: pointer; }
+
+ul { padding: 0; }
+
+.contactItem { width: 100%; max-width: 600px; margin: 10px auto; border-bottom: 2px solid #fbc531; padding: 15px 0; }
+
+.contactForm { border-bottom: 2px solid #fbc531; margin: 0 auto; display: table; padding: 20px 0; }

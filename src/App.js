@@ -1,12 +1,38 @@
 import React from 'react';
-import contacts from "./data/contacts";
+import ContactForm from "./Components/ContactForm";
+import ContactList from "./Components/ContactsList";
+import "./style.css";
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            contacts: this.props.contacts
+        }
+    }
+
+    formHandling(firstName, lastName, email) {
+        let newContacts = Array.from(this.state.contacts);
+        console.log(firstName + " - " + lastName + " - " + email);
+        let newContact = {
+            id: newContacts.length + 1,
+            firstName: firstName,
+            lastName: lastName,
+            email: email
+        };
+        newContacts.push(newContact);
+        this.setState({contacts: newContacts});
+        console.log(this.state.contacts.length);
+    }
+
+    render() {
+        return (
+            <div>
+                <ContactForm formHandling={this.formHandling.bind(this)}/>
+                <ContactList contacts={this.state.contacts}/>
+            </div>
+        )
+    }
 }
 
 export default App;
